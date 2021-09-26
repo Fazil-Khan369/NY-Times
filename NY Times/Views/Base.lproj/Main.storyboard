@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F78-LU-5YK">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NY Times -->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="initController" title="NY Times " id="BYZ-38-t0r" customClass="ArticlesMasterViewController" customModule="NY_Times_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1QF-YN-rzm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bUC-Ix-bE2"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="ett-7F-czk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1QF-YN-rzm" secondAttribute="trailing" id="75L-iJ-J4D"/>
+                            <constraint firstItem="1QF-YN-rzm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BUJ-vQ-aUt"/>
+                            <constraint firstItem="1QF-YN-rzm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dya-5B-zji"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="1QF-YN-rzm" secondAttribute="bottom" id="tWn-Ok-ZVO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="NY Times Most Popular" id="cam-UZ-2aT" userLabel="NY Times"/>
+                    <connections>
+                        <outlet property="tableView" destination="1QF-YN-rzm" id="hUn-ay-7TQ"/>
+                        <segue destination="Fwr-qD-gOC" kind="show" identifier="showArticleDetail" id="rPn-jT-A0w"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="605.60000000000002" y="7.6461769115442282"/>
+        </scene>
+        <!--Article Detail-->
+        <scene sceneID="Mkd-Do-VBU">
+            <objects>
+                <viewController title="Article Detail" id="Fwr-qD-gOC" customClass="ArticleDetailsViewController" customModule="NY_Times_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="C6V-IF-DPQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gO7-nW-ruB">
+                                <rect key="frame" x="28" y="101" width="358" height="127"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ln3-I3-LJ3">
+                                        <rect key="frame" x="141.5" y="0.0" width="75" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ln3-I3-LJ3" secondAttribute="height" multiplier="3:2" id="oLh-kZ-Izo"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" restorationIdentifier="DetailsArticleTitle" text="Article Title" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GKc-P4-dqC">
+                                        <rect key="frame" x="118.5" y="65" width="121" height="30"/>
+                                        <accessibility key="accessibilityConfiguration" identifier="DetailsArticleTitle"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" verticalCompressionResistancePriority="751" text="Article Abstract" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egU-93-XKW">
+                                        <rect key="frame" x="128.5" y="110" width="101.5" height="17"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="srg-a2-nhG"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gO7-nW-ruB" firstAttribute="leading" secondItem="srg-a2-nhG" secondAttribute="leading" constant="28" id="NMf-j7-E0d"/>
+                            <constraint firstItem="gO7-nW-ruB" firstAttribute="top" secondItem="srg-a2-nhG" secondAttribute="top" constant="13" id="VyT-K4-cqk"/>
+                            <constraint firstItem="srg-a2-nhG" firstAttribute="trailing" secondItem="gO7-nW-ruB" secondAttribute="trailing" constant="28" id="lJz-zt-R7B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="abstractLabel" destination="egU-93-XKW" id="Vxy-Uz-xxr"/>
+                        <outlet property="imageView" destination="ln3-I3-LJ3" id="M3v-ET-zOR"/>
+                        <outlet property="titleLabel" destination="GKc-P4-dqC" id="2ix-3c-954"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OwF-cD-YlJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1367" y="8"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="OXP-zx-nbk">
+            <objects>
+                <navigationController id="F78-LU-5YK" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Iag-GG-7BZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5QU-31-EDU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qVu-p9-F1u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-124" y="8"/>
+        </scene>
+    </scenes>
+</document>

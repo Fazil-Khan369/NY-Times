@@ -1,4 +1,4 @@
-# NY Times Most Popular Articles iOS Sample
+# NY Times Most Popular Articles 
 
 
 A simple app to hit the NY Times Most Popular Articles API and:
@@ -13,7 +13,7 @@ For testAPI we used
 * 7 for period
 
 This is configurable in Constants.Swift file in Project. 
-Used MVVM Design pattern and swift generic approach to develop this application.
+Used MVC Design pattern and swift generic approach to develop this application.
 
 ## Tools And Resources Used
 
@@ -52,24 +52,9 @@ Follow the steps to get test case reports:
 
 # Architecture
 
-The project uses an object oriented programming approach with MVVM architecture and utilizes structs, extensions and some class inheritance to separate and define the code more clearly.
+The project uses an object oriented programming approach with MVC architecture and utilizes structs, extensions and some class inheritance to separate and define the code more clearly.
 
 &nbsp; 
 &nbsp; 
 
-<kbd >
-<img src="https://raw.githubusercontent.com/kassemitani/NY-Times-Most-Popular-Articles-Swift-iOS-Sample/master/MVVM.png" width="80%" height="80%">
-</kbd>
 
-</br>
-</br>
-
-# MIT License
-
-Copyright 2019
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
